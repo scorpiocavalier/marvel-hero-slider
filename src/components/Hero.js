@@ -17,14 +17,15 @@ export const Hero = () => {
         <SelectorsContainer setCurrentIndex={ setCurrentIndex } /> */}
       </Container>
 
-      <DummyDiv>
+      {/* <DummyDiv>
         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, saepe voluptate eveniet ratione aperiam id voluptatem fuga commodi sapiente tenetur.</h2>
-      </DummyDiv>
+      </DummyDiv> */}
     </>
   )
 }
 
 const Container = styled.section`
+  // Position relative so that SelectorsContainer can be absolute.
   position: relative;
   width: 100%;
   height: 100vh;

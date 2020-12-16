@@ -18,6 +18,12 @@ export const Load = keyframes`
   to { width: 100%; }
 `
 
+export const ZoomIn = keyframes`
+  0% { transform: scale(1) }
+  50% { transform: scale(1.1) }
+  80% { transform: scale(1) }
+`
+
 export const Slide = index => `translateX(${ index * -100 }vw)`
 
 export const AutoSlide = keyframes`

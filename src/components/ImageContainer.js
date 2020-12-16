@@ -49,7 +49,7 @@ export const ImageContainer = () => {
 }
 
 const Container = styled.div`
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   width: 100%;
   height: 100vh;

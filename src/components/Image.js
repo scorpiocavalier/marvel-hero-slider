@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ClipDown, FadeIn, Translate } from './Animations'
+import { ClipDown, FadeIn, Translate, ZoomIn } from './Animations'
 
 export const Image = ({ image }) => {
   const { url, alt, category, heading } = image
-  
+
   return (
     <Container>
-      <Img src={ url } alt={ alt } />
+      <ImageContainer>
+        <Img src={ url } alt={ alt } />
+      </ImageContainer>
       <HeaderContainer>
         <Header>
           <Category>{ category }</Category>
@@ -19,19 +21,29 @@ export const Image = ({ image }) => {
   )
 }
 
-const Container = styled.div``
+const Container = styled.div`
+  height: 100%;
+  position: relative;
+`
+
+const ImageContainer = styled.div`
+  height: 100%;
+  overflow: hidden;
+`
 
 const Img = styled.img`
-  position: absolute;
   object-fit: cover;
   width: 100vw;
   height: 100%;
   z-index: -10;
+  animation: ${ ZoomIn } 6s infinite;
 `
 
 const HeaderContainer = styled.div`
+  position: absolute;
+  top: 0;
   width: 100vw;
-  height: 80%;
+  height: 70%;
 `
 
 const Header = styled.div`
@@ -40,8 +52,10 @@ const Header = styled.div`
   justify-content: flex-end;
   width: 50%;
   height: 100%;
-  padding: 5%;
-  animation: ${ FadeIn } 6s infinite, ${ Translate } 6s infinite;
+  padding-left: 5%;
+  animation:
+    ${ FadeIn } 6s infinite,
+    ${ Translate } 6s infinite;
 `
 
 const Category = styled.span`
