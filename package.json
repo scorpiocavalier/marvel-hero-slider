@@ -13,6 +13,11 @@
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
+  "devDependencies": {
+    "react-app-rewire-disable-chunks": "^0.0.1",
+    "react-app-rewire-multiple-entry": "^2.2.0",
+    "react-app-rewired": "^2.1.6"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

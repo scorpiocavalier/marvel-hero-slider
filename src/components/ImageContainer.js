@@ -1,10 +1,9 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { HeroContext } from './HeroContext'
-import { AutoSlide, Slide } from './Animations'
+import { AutoSlide } from './Animations'
 import { Image } from './Image'
 
-// export const ImageContainer = ({ index }) => {
 export const ImageContainer = () => {
   const { activeIndex } = useContext(HeroContext)
 
@@ -49,12 +48,9 @@ export const ImageContainer = () => {
 }
 
 const Container = styled.div`
-  /* position: absolute; */
   display: flex;
   width: 100%;
   height: 100vh;
   color: white;
-  /* transform: ${ ({ activeIndex }) => Slide(activeIndex) };
-  transition: transform 1.2s ease-in-out; */
   animation: ${ AutoSlide } 30s infinite;
 `

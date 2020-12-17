@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Selector } from './Selector'
 
-// export const SelectorsContainer = ({ setCurrentIndex }) => {
 export const SelectorsContainer = () => {
   const selectorTexts = [
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, sint!",
@@ -20,7 +19,6 @@ export const SelectorsContainer = () => {
             key={ index }
             text={ text }
             index={ index }
-            // setActiveIndex={ setActiveIndex }
           ></Selector>
         )
       }
